@@ -45,15 +45,18 @@ variable "extra_port_mappings" {
   type = map(object({
     container_port = number
     host_port      = number
+    listenAddress  = string
   }))
   default = {
     port1 = {
       container_port = 80
-      host_port      = 30080
+      host_port      = 80
+      listenAddress  = "127.0.0.1"
     }
     port2 = {
       container_port = 443
-      host_port      = 30443
+      host_port      = 443
+      listenAddress  = "127.0.0.1"
     }
 
   }

@@ -25,6 +25,7 @@ resource "kind_cluster" "default" {
         content {
           container_port = extra_port_mappings.value.container_port
           host_port      = extra_port_mappings.value.host_port
+          listen_address  = extra_port_mappings.value.listenAddress
         }
       }
     }
